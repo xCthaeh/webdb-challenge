@@ -67,6 +67,36 @@ server.post("/api/actions", (req, res) => {
     });
 });
 
+server.put("/api/projects/:projectid", async (req, res) => {
+  const { projectid } = req.params;
+  const changes = req.body;
+
+  try {
+    const count = await db("projects")
+      .where({ id: projectid })
+      .update(changes);
+
+    res.status(201).json(count);
+  } catch (err) {
+    res.status(500).json({ error: "Error updating the project.", err });
+  }
+});
+
+server.put("/api/actions/:actionid", async (req, res) => {
+  const { actionId } = req.params;
+  const changes = req.body;
+
+  try {
+    const count = await db("actions")
+      .where({ id: actionId })
+      .update(changes);
+
+    res.status(201).json(count);
+  } catch (err) {
+    res.status(500).json({ error: "Error updating the action.", err });
+  }
+});
+
 server.listen(PORT, () => {
   console.log(`server listening on port ${PORT}`);
 });
