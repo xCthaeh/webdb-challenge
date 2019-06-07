@@ -8,8 +8,6 @@ const PORT = 8000;
 
 server.use(express.json());
 
-server.use(express.json());
-
 server.get("/api/projects/:id", (req, res) => {
   db("projects")
     .where("id", id)
