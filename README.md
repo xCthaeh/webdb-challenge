@@ -34,20 +34,19 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 1. Explain the difference between `RDBMS` and `SQL`.
 
-  RDBMS stands for Relational Data Base Management System. SQL is just one of those systems.
+RDBMS stands for Relational Data Base Management System. SQL is just one of those systems.
 
 1. Why do tables need a `primary key`?
 
-  To ensure that you have a unique identifier. You should have one for each table.
+To ensure that you have a unique identifier. You should have one for each table.
 
 1. What is the name given to a table column that references the primary key on another table.
 
-  Foreign Key
+Foreign Key
 
 1. What do we need in order to have a _many to many_ relationship between two tables.
 
-  Joins
-
+Joins
 
 ## Project Set Up
 
@@ -70,22 +69,22 @@ Follow these steps for completing your project.
 
 **NOTE** There is no boilerplate for you for this project. You will need to take the steps necessary for creating this project from scratch. Start by initializing your project with a `package.json` file and go from there.
 
-- [ ] A `project` can contain multiple actions and has:
-  - [ ] a unique Id.
-  - [ ] a name.
-  - [ ] a description.
-  - [ ] a flag that indicates if the project is complete or not.
-- [ ] An `action` belongs to only one project. An action has:
-  - [ ] a unique id.
-  - [ ] a description of what needs to be done.
-  - [ ] a notes column to add additional information.
-  - [ ] a flag that indicates if the action has been completed.
+- [x] A `project` can contain multiple actions and has:
+  - [x] a unique Id.
+  - [x] a name.
+  - [x] a description.
+  - [x] a flag that indicates if the project is complete or not.
+- [x] An `action` belongs to only one project. An action has:
+  - [x] a unique id.
+  - [x] a description of what needs to be done.
+  - [x] a notes column to add additional information.
+  - [x] a flag that indicates if the action has been completed.
 
 Feel free to name the tables and fields anything you want. **Add relationships** as you see fit.
 
 ### Tasks
 
-- [ ] Build the database and tables using knex migrations. **Seeding is not needed**.
+- [x] Build the database and tables using knex migrations. **Seeding is not needed**.
 - [ ] Build the API with the following endpoints:
 
   - [ ] POST for adding projects.
