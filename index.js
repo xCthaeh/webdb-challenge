@@ -97,6 +97,34 @@ server.put("/api/actions/:actionid", async (req, res) => {
   }
 });
 
+server.delete("/api/projects/:projectid", async (req, res) => {
+  const { projectId } = req.params;
+  try {
+    const count = await db("project")
+      .where({ id: projectId })
+      .del();
+    res.status(200).json(count);
+  } catch (err) {
+    res
+      .status(500)
+      .json({ error: "There was an error deleting the project.", err });
+  }
+});
+
+server.delete("/api/actions/:actionid", async (req, res) => {
+  const { actionId } = req.params;
+  try {
+    const count = await db("action")
+      .where({ id: actionId })
+      .del();
+    res.status(200).json(count);
+  } catch (err) {
+    res
+      .status(500)
+      .json({ error: "There was an error deleting the action.", err });
+  }
+});
+
 server.listen(PORT, () => {
   console.log(`server listening on port ${PORT}`);
 });
